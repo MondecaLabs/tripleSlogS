@@ -8,8 +8,7 @@ Repository for a JAVA tool based application for gathering statistics out of SPA
 
 # Example Usage
 `
-	`HELP action:
-        java -jar TriplesLogs.jar [|-h|--h|-help|--help] `
+	
 
      TEST action:
         java -jar TriplesLogs.jar -t|-test|--t|--test      (test of default type, default path of logs and default report name)
