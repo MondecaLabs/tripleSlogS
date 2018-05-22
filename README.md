@@ -1,16 +1,33 @@
 # tripleSlogS
 Repository for a JAVA tool based application for gathering statistics out of SPARQL queries logs
 
+This project includes:
+       - command line version under /CLI directory (JAR file)
+       - web version (WAR file) under /Web directory
+       - installed MongoDB and Java drivers for Windows under /NoSQL directory.
+       - file of settings "settings.cfg" for using MongoDB
+       
+	   
 # Prerequisite 
-
+- The project uses  MongoDB 2.2.0
+- Java 1.8.X Runtime Environment (JRE) should be installed. 
 # Installation
 
+Steps for installing MongoDB in Windows environment:
+       
+       - Unzip MongoDB.zip to your favourite folder e.g., C:\
+       - add "C:\mongodb\bin" to system variable Path 
+       - execute command:
+            `mongod --config C:\mongodb\mongod.cfg --install `
+       - press WIN+R, input and run 'services.msc'
+       - find service 'MongoDB' and set to it in Automatic state
 
 # Example Usage
 `
 	
 
      TEST action:
+		java -jar TriplesLogs.jar [|-h|--h|-help|--help]	(Help to use tripleSlogS)
         java -jar TriplesLogs.jar -t|-test|--t|--test      (test of default type, default path of logs and default report name)
         java -jar TriplesLogs.jar -t -all                  (test of all types with default path of logs and report name for each type)
         java -jar TriplesLogs.jar -t Logs/VH -type vh      (test of virtuoso_http with established path of logs and default report name)
