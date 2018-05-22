@@ -1,0 +1,10 @@
+Mode: LOAD
+Type: Virtuoso_sparql
+Path: Logs/V_sparql
+
+******************************** LOG FILES ********************************
+
+
+Don't found data in db.
+
+Total time: 00 m 00.003 s

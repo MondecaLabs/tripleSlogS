@@ -1,0 +1,22 @@
+Mode: SAVE
+Type: Virtuoso_http
+Path: Logs/V_http
+
+
+******************************** STATISTICS *******************************
+
+Duplicate queries:                       832 / 1458,  57.06%
+
+Distinct queries - number of ASK:         17 /  626,   2.72%
+Distinct queries - number of DESCRIBE:   146 /  626,  23.32%
+Distinct queries - number of SELECT:     460 /  626,  73.48%
+Distinct queries - number of CONSTRUCT:    0 /  626,   0.00%
+
+********************************** TOTAL **********************************
+
+      7 FILES                   with errors:  6
+                       with distinct errors:  6
+   1458 QUERIES                 with errors:  encoded = 0, unparsed = {   72 / 1458,  4.94% } 
+                       with distinct errors:  encoded = 0, unparsed = {   53 /  626,  8.47% } 
+
+Total time: 00 m 04.135 s

@@ -1,0 +1,1245 @@
+Mode: TEST
+Type: Virtuoso_http
+Path: Logs/V_http
+
+************************* FILE (1) 'virtuoso_http01022016.log' *************************
+
+virtuoso_http01022016.log:  date = 2016/02/01, statistics = { total =  218, countBGP =    9, distincts = {   61/ 218, 27.98% },  types = { CONSTRUCT = {    0/  61,  0.00% },  ASK = {    0/  61,  0.00% },  DESCRIBE = {   50/  61, 81.97% },  SELECT = {   10/  61, 16.39% } },  commands = { OPTIONAL = {   0/ 27,  0.00% },  FILTER = {   8/ 27, 29.63% },  REGEX = {   4/ 27, 14.81% },  DISTINCT = {   5/ 27, 18.52% },  OFFSET = {   0/ 27,  0.00% },  LIMIT = {   6/ 27, 22.22% },  GROUP BY = {   0/ 27,  0.00% },  UNION = {   1/ 27,  3.70% },  ORDER BY = {   3/ 27, 11.11% } } } 
+
+---------------- Query 1
+    01/Feb/2016:01:39:16 query:
+
+ 1: LEQveD http://www.FyLitCl7Pf7kjQdDUOLQOuaxTXbj5iNG.com LEQveD http://www.FyLitCl7Pf7kjQdDUOLQOuaxTXbj5iNG.com
+
+           ERROR (UNPARSED): Lexical error at line 1, column 7.  Encountered: " " (32), after : "LEQveD"
+
+---------------- Query 2
+    01/Feb/2016:01:48:21 query:
+
+ 1: PREFIX dcat: <http://www.w3.org/ns/dcat#>
+ 2: PREFIX odp:  <http://open-data.europa.eu/ontologies/ec-odp#>
+ 3: PREFIX dc: <http://purl.org/dc/terms/>
+ 4: PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+ 5: PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+ 6:  SELECT  ?Publisher  (count(?DatasetURI) as ?DatasetNumber) WHERE { graph ?g {?DatasetURI a dcat:Dataset; dc:publisher ?Publisher} } ORDER BY desc (?DatasetNumber) LIMIT 10
+
+           ERROR (UNPARSED): Non-group key variable in SELECT: ?Publisher
+
+---------------- Query 3
+    01/Feb/2016:15:49:46 query:
+
+ 1: SELECT ?s ?p ?o
+ 2: 
+ 3: 
+ 4: FROM <http://data.lod2.eu/scoreboard/>
+ 5: WHERE { 
+ 6: 
+ 7:                 ?s ?p ?o .
+ 8: 
+ 9:                 ?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#Observation> .
+10: 
+11:                 ?s <http://purl.org/linked-data/cube#dataSet> <http://data.lod2.eu/scoreboard/ds/indicator/FOA_cit_Country__of_pub_serv_for_citizen> .
+12:  ?s <http://data.lod2.eu/scoreboard/properties/country> ?d0 .
+13:  ?s <http://data.lod2.eu/scoreboard/properties/year> ?d1 .
+14:  FILTER ( ?d0 = <http://data.lod2.eu/scoreboard/country/Spain> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Germany> OR ?d0 = <http://data.lod2.eu/scoreboard/country/France> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Ireland> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Finland> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Greece> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Iceland> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Denmark> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Italy> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Belgium> ) 
+15:  FILTER ( ?d1 = <http://data.lod2.eu/scoreboard/year/2004> OR ?d1 = <http://data.lod2.eu/scoreboard/year/2001> OR ?d1 = <http://data.lod2.eu/scoreboard/year/2003> ) 
+16: }
+
+           ERROR (UNPARSED): Lexical error at line 14, column 66.  Encountered: " " (32), after : "OR"
+
+************************* FILE (2) 'virtuoso_http01032016.log' *************************
+
+virtuoso_http01032016.log:  date = 2016/03/01, statistics = { total =   72, countBGP =   11, distincts = {   31/  72, 43.06% },  types = { CONSTRUCT = {    0/  31,  0.00% },  ASK = {    0/  31,  0.00% },  DESCRIBE = {    3/  31,  9.68% },  SELECT = {   28/  31, 90.32% } },  commands = { OPTIONAL = {   0/ 58,  0.00% },  FILTER = {  41/ 58, 70.69% },  REGEX = {   4/ 58,  6.90% },  DISTINCT = {   3/ 58,  5.17% },  OFFSET = {   0/ 58,  0.00% },  LIMIT = {   7/ 58, 12.07% },  GROUP BY = {   0/ 58,  0.00% },  UNION = {   2/ 58,  3.45% },  ORDER BY = {   1/ 58,  1.72% } } } 
+
+---------------- Query 1
+    01/Mar/2016:12:08:52 query:
+
+ 1: SELECT ?s ?p ?o
+ 2: 
+ 3: 
+ 4: FROM <http://data.lod2.eu/scoreboard/>
+ 5: WHERE { 
+ 6: 
+ 7:                 ?s ?p ?o .
+ 8: 
+ 9:                 ?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#Observation> .
+10: 
+11:                 ?s <http://purl.org/linked-data/cube#dataSet> <http://data.lod2.eu/scoreboard/ds/indicator/FOA_cit_Country__of_pub_serv_for_citizen> .
+12:  ?s <http://data.lod2.eu/scoreboard/properties/country> ?d0 .
+13:  ?s <http://data.lod2.eu/scoreboard/properties/year> ?d1 .
+14:  FILTER ( ?d0 = <http://data.lod2.eu/scoreboard/country/Ireland> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Germany> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Belgium> OR ?d0 = <http://data.lod2.eu/scoreboard/country/France> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Iceland> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Finland> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Austria> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Greece> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Spain> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Denmark> ) 
+15:  FILTER ( ?d1 = <http://data.lod2.eu/scoreboard/year/2002> OR ?d1 = <http://data.lod2.eu/scoreboard/year/2003> OR ?d1 = <http://data.lod2.eu/scoreboard/year/2004> ) 
+16: }
+
+           ERROR (UNPARSED): Lexical error at line 14, column 68.  Encountered: " " (32), after : "OR"
+
+---------------- Query 2
+    01/Mar/2016:12:09:45 query:
+
+ 1: SELECT ?s ?p ?o
+ 2: 
+ 3: 
+ 4: FROM <http://data.lod2.eu/scoreboard/>
+ 5: WHERE { 
+ 6: 
+ 7:                 ?s ?p ?o .
+ 8: 
+ 9:                 ?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#Observation> .
+10: 
+11:                 ?s <http://purl.org/linked-data/cube#dataSet> <http://data.lod2.eu/scoreboard/ds/indicator/FOA_cit_Country__of_pub_serv_for_citizen> .
+12:  ?s <http://data.lod2.eu/scoreboard/properties/country> ?d0 .
+13:  ?s <http://data.lod2.eu/scoreboard/properties/year> ?d1 .
+14:  FILTER ( ?d0 = <http://data.lod2.eu/scoreboard/country/Austria> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Belgium> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Germany> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Denmark> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Greece> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Spain> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Finland> OR ?d0 = <http://data.lod2.eu/scoreboard/country/France> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Ireland> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Iceland> ) 
+15:  FILTER ( ?d1 = <http://data.lod2.eu/scoreboard/year/2007> OR ?d1 = <http://data.lod2.eu/scoreboard/year/2009> OR ?d1 = <http://data.lod2.eu/scoreboard/year/2010> ) 
+16: }
+
+           ERROR (UNPARSED): Lexical error at line 14, column 68.  Encountered: " " (32), after : "OR"
+
+---------------- Query 3
+    01/Mar/2016:12:10:07 query:
+
+ 1: SELECT ?s ?p ?o
+ 2: 
+ 3: 
+ 4: FROM <http://data.lod2.eu/scoreboard/>
+ 5: WHERE { 
+ 6: 
+ 7:                 ?s ?p ?o .
+ 8: 
+ 9:                 ?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#Observation> .
+10: 
+11:                 ?s <http://purl.org/linked-data/cube#dataSet> <http://data.lod2.eu/scoreboard/ds/indicator/FOA_cit_Country__of_pub_serv_for_citizen> .
+12:  ?s <http://data.lod2.eu/scoreboard/properties/country> ?d0 .
+13:  ?s <http://data.lod2.eu/scoreboard/properties/year> ?d1 .
+14:  FILTER ( ?d0 = <http://data.lod2.eu/scoreboard/country/Italy> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Spain> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Finland> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Austria> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Ireland> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Belgium> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Iceland> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Greece> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Denmark> OR ?d0 = <http://data.lod2.eu/scoreboard/country/France> ) 
+15:  FILTER ( ?d1 = <http://data.lod2.eu/scoreboard/year/2002> OR ?d1 = <http://data.lod2.eu/scoreboard/year/2004> OR ?d1 = <http://data.lod2.eu/scoreboard/year/2001> ) 
+16: }
+
+           ERROR (UNPARSED): Lexical error at line 14, column 66.  Encountered: " " (32), after : "OR"
+
+---------------- Query 4
+    01/Mar/2016:12:10:10 query:
+
+ 1: SELECT ?s ?p ?o
+ 2: 
+ 3: 
+ 4: FROM <http://data.lod2.eu/scoreboard/>
+ 5: WHERE { 
+ 6: 
+ 7:                 ?s ?p ?o .
+ 8: 
+ 9:                 ?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#Observation> .
+10: 
+11:                 ?s <http://purl.org/linked-data/cube#dataSet> <http://data.lod2.eu/scoreboard/ds/indicator/FOA_cit_Country__of_pub_serv_for_citizen> .
+12:  ?s <http://data.lod2.eu/scoreboard/properties/country> ?d0 .
+13:  ?s <http://data.lod2.eu/scoreboard/properties/year> ?d1 .
+14:  FILTER ( ?d0 = <http://data.lod2.eu/scoreboard/country/Finland> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Ireland> OR ?d0 = <http://data.lod2.eu/scoreboard/country/France> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Belgium> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Austria> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Spain> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Iceland> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Italy> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Denmark> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Greece> ) 
+15:  FILTER ( ?d1 = <http://data.lod2.eu/scoreboard/year/2003> OR ?d1 = <http://data.lod2.eu/scoreboard/year/2001> OR ?d1 = <http://data.lod2.eu/scoreboard/year/2002> ) 
+16: }
+
+           ERROR (UNPARSED): Lexical error at line 14, column 68.  Encountered: " " (32), after : "OR"
+
+---------------- Query 5
+    01/Mar/2016:12:10:14 query:
+
+ 1: SELECT ?s ?p ?o
+ 2: 
+ 3: 
+ 4: FROM <http://data.lod2.eu/scoreboard/>
+ 5: WHERE { 
+ 6: 
+ 7:                 ?s ?p ?o .
+ 8: 
+ 9:                 ?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#Observation> .
+10: 
+11:                 ?s <http://purl.org/linked-data/cube#dataSet> <http://data.lod2.eu/scoreboard/ds/indicator/FOA_cit_Country__of_pub_serv_for_citizen> .
+12:  ?s <http://data.lod2.eu/scoreboard/properties/country> ?d0 .
+13:  ?s <http://data.lod2.eu/scoreboard/properties/year> ?d1 .
+14:  FILTER ( ?d0 = <http://data.lod2.eu/scoreboard/country/France> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Spain> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Finland> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Greece> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Austria> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Germany> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Italy> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Belgium> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Denmark> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Ireland> ) 
+15:  FILTER ( ?d1 = <http://data.lod2.eu/scoreboard/year/2002> OR ?d1 = <http://data.lod2.eu/scoreboard/year/2003> OR ?d1 = <http://data.lod2.eu/scoreboard/year/2001> ) 
+16: }
+
+           ERROR (UNPARSED): Lexical error at line 14, column 67.  Encountered: " " (32), after : "OR"
+
+---------------- Query 6
+    01/Mar/2016:12:10:18 query:
+
+ 1: SELECT ?s ?p ?o
+ 2: 
+ 3: 
+ 4: FROM <http://data.lod2.eu/scoreboard/>
+ 5: WHERE { 
+ 6: 
+ 7:                 ?s ?p ?o .
+ 8: 
+ 9:                 ?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#Observation> .
+10: 
+11:                 ?s <http://purl.org/linked-data/cube#dataSet> <http://data.lod2.eu/scoreboard/ds/indicator/FOA_cit_Country__of_pub_serv_for_citizen> .
+12:  ?s <http://data.lod2.eu/scoreboard/properties/country> ?d0 .
+13:  ?s <http://data.lod2.eu/scoreboard/properties/year> ?d1 .
+14:  FILTER ( ?d0 = <http://data.lod2.eu/scoreboard/country/Ireland> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Finland> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Austria> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Italy> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Iceland> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Greece> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Spain> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Denmark> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Germany> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Belgium> ) 
+15:  FILTER ( ?d1 = <http://data.lod2.eu/scoreboard/year/2001> OR ?d1 = <http://data.lod2.eu/scoreboard/year/2004> OR ?d1 = <http://data.lod2.eu/scoreboard/year/2002> ) 
+16: }
+
+           ERROR (UNPARSED): Lexical error at line 14, column 68.  Encountered: " " (32), after : "OR"
+
+---------------- Query 7
+    01/Mar/2016:12:10:45 query:
+
+ 1: SELECT ?s ?p ?o
+ 2: 
+ 3: 
+ 4: FROM <http://data.lod2.eu/scoreboard/>
+ 5: WHERE { 
+ 6: 
+ 7:                 ?s ?p ?o .
+ 8: 
+ 9:                 ?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#Observation> .
+10: 
+11:                 ?s <http://purl.org/linked-data/cube#dataSet> <http://data.lod2.eu/scoreboard/ds/indicator/FOA_cit_Country__of_pub_serv_for_citizen> .
+12:  ?s <http://data.lod2.eu/scoreboard/properties/country> ?d0 .
+13:  ?s <http://data.lod2.eu/scoreboard/properties/year> ?d1 .
+14:  FILTER ( ?d0 = <http://data.lod2.eu/scoreboard/country/Belgium> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Greece> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Ireland> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Austria> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Spain> OR ?d0 = <http://data.lod2.eu/scoreboard/country/France> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Iceland> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Finland> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Italy> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Denmark> ) 
+15:  FILTER ( ?d1 = <http://data.lod2.eu/scoreboard/year/2001> OR ?d1 = <http://data.lod2.eu/scoreboard/year/2002> OR ?d1 = <http://data.lod2.eu/scoreboard/year/2003> ) 
+16: }
+
+           ERROR (UNPARSED): Lexical error at line 14, column 68.  Encountered: " " (32), after : "OR"
+
+---------------- Query 8
+    01/Mar/2016:12:42:42 query:
+
+ 1: SELECT ?s ?p ?o
+ 2: 
+ 3: 
+ 4: FROM <http://data.lod2.eu/scoreboard/>
+ 5: WHERE { 
+ 6: 
+ 7:                 ?s ?p ?o .
+ 8: 
+ 9:                 ?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#Observation> .
+10: 
+11:                 ?s <http://purl.org/linked-data/cube#dataSet> <http://data.lod2.eu/scoreboard/ds/indicator/FOA_cit_Country__of_pub_serv_for_citizen> .
+12:  ?s <http://data.lod2.eu/scoreboard/properties/country> ?d0 .
+13:  ?s <http://data.lod2.eu/scoreboard/properties/year> ?d1 .
+14:  FILTER ( ?d0 = <http://data.lod2.eu/scoreboard/country/Denmark> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Finland> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Iceland> OR ?d0 = <http://data.lod2.eu/scoreboard/country/France> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Italy> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Germany> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Austria> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Belgium> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Spain> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Greece> ) 
+15:  FILTER ( ?d1 = <http://data.lod2.eu/scoreboard/year/2004> OR ?d1 = <http://data.lod2.eu/scoreboard/year/2002> OR ?d1 = <http://data.lod2.eu/scoreboard/year/2003> ) 
+16: }
+
+           ERROR (UNPARSED): Lexical error at line 14, column 68.  Encountered: " " (32), after : "OR"
+
+---------------- Query 9
+    01/Mar/2016:18:57:44 query:
+
+ 1: SELECT ?s ?p ?o
+ 2: 
+ 3: 
+ 4: FROM <http://data.lod2.eu/scoreboard/>
+ 5: WHERE { 
+ 6: 
+ 7:                 ?s ?p ?o .
+ 8: 
+ 9:                 ?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#Observation> .
+10: 
+11:                 ?s <http://purl.org/linked-data/cube#dataSet> <http://data.lod2.eu/scoreboard/ds/indicator/FOA_cit_Country__of_pub_serv_for_citizen> .
+12:  ?s <http://data.lod2.eu/scoreboard/properties/country> ?d0 .
+13:  ?s <http://data.lod2.eu/scoreboard/properties/year> ?d1 .
+14:  FILTER ( ?d0 = <http://data.lod2.eu/scoreboard/country/France> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Iceland> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Ireland> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Finland> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Austria> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Greece> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Germany> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Belgium> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Spain> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Italy> ) 
+15:  FILTER ( ?d1 = <http://data.lod2.eu/scoreboard/year/2002> OR ?d1 = <http://data.lod2.eu/scoreboard/year/2004> OR ?d1 = <http://data.lod2.eu/scoreboard/year/2003> ) 
+16: }
+
+           ERROR (UNPARSED): Lexical error at line 14, column 67.  Encountered: " " (32), after : "OR"
+
+---------------- Query 10
+    01/Mar/2016:18:59:16 query:
+
+ 1: SELECT ?s ?p ?o
+ 2: 
+ 3: 
+ 4: FROM <http://data.lod2.eu/scoreboard/>
+ 5: WHERE { 
+ 6: 
+ 7:                 ?s ?p ?o .
+ 8: 
+ 9:                 ?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#Observation> .
+10: 
+11:                 ?s <http://purl.org/linked-data/cube#dataSet> <http://data.lod2.eu/scoreboard/ds/indicator/e_igov_ENT_ALL_XFIN__ent> .
+12:  ?s <http://data.lod2.eu/scoreboard/properties/country> ?d0 .
+13:  ?s <http://data.lod2.eu/scoreboard/properties/year> ?d1 .
+14:  FILTER ( ?d0 = <http://data.lod2.eu/scoreboard/country/Austria> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Denmark> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Spain> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Czech+Republic> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Estonia> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Greece> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Latvia> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Slovenia> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Malta> OR ?d0 = <http://data.lod2.eu/scoreboard/country/France> ) 
+15:  FILTER ( ?d1 = <http://data.lod2.eu/scoreboard/year/2003> OR ?d1 = <http://data.lod2.eu/scoreboard/year/2004> OR ?d1 = <http://data.lod2.eu/scoreboard/year/2006> ) 
+16: }
+
+           ERROR (UNPARSED): Lexical error at line 14, column 68.  Encountered: " " (32), after : "OR"
+
+---------------- Query 11
+    01/Mar/2016:18:59:24 query:
+
+ 1: SELECT ?s ?p ?o
+ 2: 
+ 3: 
+ 4: FROM <http://data.lod2.eu/scoreboard/>
+ 5: WHERE { 
+ 6: 
+ 7:                 ?s ?p ?o .
+ 8: 
+ 9:                 ?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#Observation> .
+10: 
+11:                 ?s <http://purl.org/linked-data/cube#dataSet> <http://data.lod2.eu/scoreboard/ds/indicator/e_igov_ENT_ALL_XFIN__ent> .
+12:  ?s <http://data.lod2.eu/scoreboard/properties/country> ?d0 .
+13:  ?s <http://data.lod2.eu/scoreboard/properties/year> ?d1 .
+14:  FILTER ( ?d0 = <http://data.lod2.eu/scoreboard/country/Austria> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Belgium> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Bulgaria> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Croatia> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Cyprus> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Czech+Republic> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Denmark> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Estonia> OR ?d0 = <http://data.lod2.eu/scoreboard/country/European+Union+-+27+countries> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Finland> OR ?d0 = <http://data.lod2.eu/scoreboard/country/France> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Germany> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Greece> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Hungary> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Iceland> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Ireland> OR ?d0 = <http://data.lod2.eu/scoreboa
+
+           ERROR (UNPARSED): Lexical error at line 14, column 68.  Encountered: " " (32), after : "OR"
+
+---------------- Query 12
+    01/Mar/2016:18:59:50 query:
+
+ 1: SELECT ?s ?p ?o
+ 2: 
+ 3: 
+ 4: FROM <http://data.lod2.eu/scoreboard/>
+ 5: WHERE { 
+ 6: 
+ 7:                 ?s ?p ?o .
+ 8: 
+ 9:                 ?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#Observation> .
+10: 
+11:                 ?s <http://purl.org/linked-data/cube#dataSet> <http://data.lod2.eu/scoreboard/ds/indicator/e_igov_ENT_ALL_XFIN__ent> .
+12:  ?s <http://data.lod2.eu/scoreboard/properties/country> ?d0 .
+13:  ?s <http://data.lod2.eu/scoreboard/properties/year> ?d1 .
+14:  FILTER ( ?d0 = <http://data.lod2.eu/scoreboard/country/Austria> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Belgium> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Bulgaria> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Croatia> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Cyprus> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Czech+Republic> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Denmark> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Estonia> OR ?d0 = <http://data.lod2.eu/scoreboard/country/European+Union+-+27+countries> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Finland> OR ?d0 = <http://data.lod2.eu/scoreboard/country/France> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Germany> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Greece> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Hungary> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Iceland> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Ireland> OR ?d0 = <http://data.lod2.eu/scoreboa
+
+           ERROR (UNPARSED): Lexical error at line 14, column 68.  Encountered: " " (32), after : "OR"
+
+---------------- Query 13
+    01/Mar/2016:19:01:28 query:
+
+ 1: SELECT ?s ?p ?o
+ 2: 
+ 3: 
+ 4: FROM <http://data.lod2.eu/scoreboard/>
+ 5: WHERE { 
+ 6: 
+ 7:                 ?s ?p ?o .
+ 8: 
+ 9:                 ?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#Observation> .
+10: 
+11:                 ?s <http://purl.org/linked-data/cube#dataSet> <http://data.lod2.eu/scoreboard/ds/indicator/FOA_cit_Country__of_pub_serv_for_citizen> .
+12:  ?s <http://data.lod2.eu/scoreboard/properties/country> ?d0 .
+13:  ?s <http://data.lod2.eu/scoreboard/properties/year> ?d1 .
+14:  FILTER ( ?d0 = <http://data.lod2.eu/scoreboard/country/Ireland> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Denmark> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Austria> OR ?d0 = <http://data.lod2.eu/scoreboard/country/France> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Spain> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Italy> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Germany> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Finland> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Iceland> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Greece> ) 
+15:  FILTER ( ?d1 = <http://data.lod2.eu/scoreboard/year/2004> OR ?d1 = <http://data.lod2.eu/scoreboard/year/2002> OR ?d1 = <http://data.lod2.eu/scoreboard/year/2003> ) 
+16: }
+
+           ERROR (UNPARSED): Lexical error at line 14, column 68.  Encountered: " " (32), after : "OR"
+
+---------------- Query 14
+    01/Mar/2016:19:01:31 query:
+
+ 1: SELECT ?s ?p ?o
+ 2: 
+ 3: 
+ 4: FROM <http://data.lod2.eu/scoreboard/>
+ 5: WHERE { 
+ 6: 
+ 7:                 ?s ?p ?o .
+ 8: 
+ 9:                 ?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#Observation> .
+10: 
+11:                 ?s <http://purl.org/linked-data/cube#dataSet> <http://data.lod2.eu/scoreboard/ds/indicator/FOA_cit_Country__of_pub_serv_for_citizen> .
+12:  ?s <http://data.lod2.eu/scoreboard/properties/country> ?d0 .
+13:  ?s <http://data.lod2.eu/scoreboard/properties/year> ?d1 .
+14:  FILTER ( ?d0 = <http://data.lod2.eu/scoreboard/country/France> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Iceland> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Greece> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Spain> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Germany> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Italy> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Ireland> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Austria> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Finland> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Belgium> ) 
+15:  FILTER ( ?d1 = <http://data.lod2.eu/scoreboard/year/2001> OR ?d1 = <http://data.lod2.eu/scoreboard/year/2004> OR ?d1 = <http://data.lod2.eu/scoreboard/year/2003> ) 
+16: }
+
+           ERROR (UNPARSED): Lexical error at line 14, column 67.  Encountered: " " (32), after : "OR"
+
+---------------- Query 15
+    01/Mar/2016:19:01:42 query:
+
+ 1: SELECT ?s ?p ?o
+ 2: 
+ 3: 
+ 4: FROM <http://data.lod2.eu/scoreboard/>
+ 5: WHERE { 
+ 6: 
+ 7:                 ?s ?p ?o .
+ 8: 
+ 9:                 ?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#Observation> .
+10: 
+11:                 ?s <http://purl.org/linked-data/cube#dataSet> <http://data.lod2.eu/scoreboard/ds/year/2001> .
+12:  ?s <http://data.lod2.eu/scoreboard/properties/country> ?d0 .
+13:  ?s <http://data.lod2.eu/scoreboard/properties/indicator> ?d1 .
+14:  FILTER ( ?d0 = <http://data.lod2.eu/scoreboard/country/Denmark> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Greece> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Spain> OR ?d0 = <http://data.lod2.eu/scoreboard/country/France> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Norway> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Portugal> ) 
+15:  FILTER ( ?d1 = <http://data.lod2.eu/scoreboard/indicators/FOA_ent_Country__of_pub_serv_for_ent> ) 
+16: }
+
+           ERROR (UNPARSED): Lexical error at line 14, column 68.  Encountered: " " (32), after : "OR"
+
+---------------- Query 16
+    01/Mar/2016:19:01:55 query:
+
+ 1: SELECT ?s ?p ?o
+ 2: 
+ 3: 
+ 4: FROM <http://data.lod2.eu/scoreboard/>
+ 5: WHERE { 
+ 6: 
+ 7:                 ?s ?p ?o .
+ 8: 
+ 9:                 ?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#Observation> .
+10: 
+11:                 ?s <http://purl.org/linked-data/cube#dataSet> <http://data.lod2.eu/scoreboard/ds/year/2001> .
+12:  ?s <http://data.lod2.eu/scoreboard/properties/country> ?d0 .
+13:  ?s <http://data.lod2.eu/scoreboard/properties/indicator> ?d1 .
+14:  FILTER ( ?d0 = <http://data.lod2.eu/scoreboard/country/Denmark> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Iceland> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Italy> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Netherlands> ) 
+15:  FILTER ( ?d1 = <http://data.lod2.eu/scoreboard/indicators/FOA_ent_Country__of_pub_serv_for_ent> ) 
+16: }
+
+           ERROR (UNPARSED): Lexical error at line 14, column 68.  Encountered: " " (32), after : "OR"
+
+---------------- Query 17
+    01/Mar/2016:19:04:26 query:
+
+ 1: SELECT ?s ?p ?o
+ 2: 
+ 3: 
+ 4: FROM <http://data.lod2.eu/scoreboard/>
+ 5: WHERE { 
+ 6: 
+ 7:                 ?s ?p ?o .
+ 8: 
+ 9:                 ?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#Observation> .
+10: 
+11:                 ?s <http://purl.org/linked-data/cube#dataSet> <http://data.lod2.eu/scoreboard/ds/indicator/i_iuolc_IND_TOTAL__ind> .
+12:  ?s <http://data.lod2.eu/scoreboard/properties/country> ?d0 .
+13:  ?s <http://data.lod2.eu/scoreboard/properties/year> ?d1 .
+14:  FILTER ( ?d0 = <http://data.lod2.eu/scoreboard/country/Austria> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Cyprus> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Czech+Republic> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Finland> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Croatia> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Luxembourg> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Poland> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Slovenia> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Slovak+Republic> OR ?d0 = <http://data.lod2.eu/scoreboard/country/United+Kingdom> ) 
+15:  FILTER ( ?d1 = <http://data.lod2.eu/scoreboard/year/2007> OR ?d1 = <http://data.lod2.eu/scoreboard/year/2009> ) 
+16: }
+
+           ERROR (UNPARSED): Lexical error at line 14, column 68.  Encountered: " " (32), after : "OR"
+
+---------------- Query 18
+    01/Mar/2016:19:04:44 query:
+
+ 1: SELECT ?s ?p ?o
+ 2: 
+ 3: 
+ 4: FROM <http://data.lod2.eu/scoreboard/>
+ 5: WHERE { 
+ 6: 
+ 7:                 ?s ?p ?o .
+ 8: 
+ 9:                 ?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#Observation> .
+10: 
+11:                 ?s <http://purl.org/linked-data/cube#dataSet> <http://data.lod2.eu/scoreboard/ds/indicator/i_iuolc_IND_TOTAL__ind> .
+12:  ?s <http://data.lod2.eu/scoreboard/properties/country> ?d0 .
+13:  ?s <http://data.lod2.eu/scoreboard/properties/year> ?d1 .
+14:  FILTER ( ?d0 = <http://data.lod2.eu/scoreboard/country/Austria> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Cyprus> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Czech+Republic> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Finland> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Croatia> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Luxembourg> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Poland> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Slovenia> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Slovak+Republic> OR ?d0 = <http://data.lod2.eu/scoreboard/country/United+Kingdom> ) 
+15:  FILTER ( ?d1 = <http://data.lod2.eu/scoreboard/year/2007> OR ?d1 = <http://data.lod2.eu/scoreboard/year/2008> OR ?d1 = <http://data.lod2.eu/scoreboard/year/2009> ) 
+16: }
+
+           ERROR (UNPARSED): Lexical error at line 14, column 68.  Encountered: " " (32), after : "OR"
+
+---------------- Query 19
+    01/Mar/2016:22:01:26 query:
+
+ 1: SELECT ?s ?p ?o
+ 2: 
+ 3: 
+ 4: FROM <http://data.lod2.eu/scoreboard/>
+ 5: WHERE { 
+ 6: 
+ 7:                 ?s ?p ?o .
+ 8: 
+ 9:                 ?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#Observation> .
+10: 
+11:                 ?s <http://purl.org/linked-data/cube#dataSet> <http://data.lod2.eu/scoreboard/ds/indicator/FOA_cit_Country__of_pub_serv_for_citizen> .
+12:  ?s <http://data.lod2.eu/scoreboard/properties/country> ?d0 .
+13:  ?s <http://data.lod2.eu/scoreboard/properties/year> ?d1 .
+14:  FILTER ( ?d0 = <http://data.lod2.eu/scoreboard/country/Greece> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Germany> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Denmark> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Italy> OR ?d0 = <http://data.lod2.eu/scoreboard/country/France> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Ireland> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Belgium> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Finland> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Austria> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Iceland> ) 
+15:  FILTER ( ?d1 = <http://data.lod2.eu/scoreboard/year/2001> OR ?d1 = <http://data.lod2.eu/scoreboard/year/2003> OR ?d1 = <http://data.lod2.eu/scoreboard/year/2004> ) 
+16: }
+
+           ERROR (UNPARSED): Lexical error at line 14, column 67.  Encountered: " " (32), after : "OR"
+
+************************* FILE (3) 'virtuoso_http01042016.log' *************************
+
+virtuoso_http01042016.log:  date = 2016/04/01, statistics = { total =   26, countBGP =    8, distincts = {   13/  26, 50.00% },  types = { CONSTRUCT = {    0/  13,  0.00% },  ASK = {    0/  13,  0.00% },  DESCRIBE = {    0/  13,  0.00% },  SELECT = {   13/  13,100.00% } },  commands = { OPTIONAL = {   0/ 28,  0.00% },  FILTER = {   3/ 28, 10.71% },  REGEX = {   3/ 28, 10.71% },  DISTINCT = {   3/ 28, 10.71% },  OFFSET = {   0/ 28,  0.00% },  LIMIT = {  13/ 28, 46.43% },  GROUP BY = {   0/ 28,  0.00% },  UNION = {   0/ 28,  0.00% },  ORDER BY = {   6/ 28, 21.43% } } } 
+
+---------------- Query 1
+    01/Apr/2016:18:02:30 query:
+
+ 1: PREFIX dcat: <http://www.w3.org/ns/dcat#>
+ 2: PREFIX odp:  <http://open-data.europa.eu/ontologies/ec-odp#>
+ 3: PREFIX dc: <http://purl.org/dc/terms/>
+ 4: PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+ 5: PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+ 6:  SELECT  ?Publisher  (count(?DatasetURI) as ?DatasetNumber) WHERE { graph ?g {?DatasetURI a dcat:Dataset; dc:publisher ?Publisher} } ORDER BY desc (?DatasetNumber)  LIMIT 100
+
+           ERROR (UNPARSED): Non-group key variable in SELECT: ?Publisher
+
+---------------- Query 2
+    01/Apr/2016:18:05:28 query:
+
+ 1: PREFIX dcat: <http://www.w3.org/ns/dcat#>
+ 2: PREFIX odp:  <http://open-data.europa.eu/ontologies/ec-odp#>
+ 3: PREFIX dc: <http://purl.org/dc/terms/>
+ 4: PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+ 5: PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+ 6:  SELECT  ?Publisher  (count(?DatasetURI) as ?DatasetNumber) WHERE { graph ?g {?DatasetURI a dcat:Dataset; dc:publisher ?Publisher} } ORDER BY desc (?DatasetNumber)   LIMIT 100
+
+           ERROR (UNPARSED): Non-group key variable in SELECT: ?Publisher
+
+---------------- Query 3
+    01/Apr/2016:18:06:00 query:
+
+ 1: PREFIX dcat: <http://www.w3.org/ns/dcat#>
+ 2: PREFIX odp:  <http://open-data.europa.eu/ontologies/ec-odp#>
+ 3: PREFIX dc: <http://purl.org/dc/terms/>
+ 4: PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+ 5: PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+ 6:  SELECT  ?Publisher  (count(?DatasetURI) as ?DatasetNumber) WHERE { graph ?g {?DatasetURI a dcat:Dataset; dc:publisher ?Publisher} } ORDER BY desc (?DatasetNumber)    LIMIT 100
+
+           ERROR (UNPARSED): Non-group key variable in SELECT: ?Publisher
+
+---------------- Query 4
+    01/Apr/2016:18:06:52 query:
+
+ 1: PREFIX dcat: <http://www.w3.org/ns/dcat#>
+ 2: PREFIX odp:  <http://open-data.europa.eu/ontologies/ec-odp#>
+ 3: PREFIX dc: <http://purl.org/dc/terms/>
+ 4: PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+ 5: PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+ 6:  SELECT  ?Publisher  (count(?DatasetURI) as ?DatasetNumber) WHERE { graph ?g {?DatasetURI a dcat:Dataset; dc:publisher ?Publisher} } ORDER BY desc (?DatasetNumber)    LIMIT 100
+
+           ERROR (UNPARSED): Non-group key variable in SELECT: ?Publisher
+
+---------------- Query 5
+    01/Apr/2016:18:08:58 query:
+
+ 1: PREFIX dcat: <http://www.w3.org/ns/dcat#>
+ 2: PREFIX odp:  <http://open-data.europa.eu/ontologies/ec-odp#>
+ 3: PREFIX dc: <http://purl.org/dc/terms/>
+ 4: PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+ 5: PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+ 6:  SELECT  ?Publisher (SUM(??DatasetNumber) AS ?totalPrice) (count(?DatasetURI) as ?DatasetNumber) WHERE { graph ?g {?DatasetURI a dcat:Dataset; dc:publisher ?Publisher} } ORDER BY desc (?DatasetNumber)  LIMIT 100
+
+           ERROR (UNPARSED): Encountered " "?" "? "" at line 6, column 26.
+
+---------------- Query 6
+    01/Apr/2016:18:09:07 query:
+
+ 1: PREFIX dcat: <http://www.w3.org/ns/dcat#>
+ 2: PREFIX odp:  <http://open-data.europa.eu/ontologies/ec-odp#>
+ 3: PREFIX dc: <http://purl.org/dc/terms/>
+ 4: PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+ 5: PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+ 6:  SELECT  ?Publisher (SUM(?DatasetNumber) AS ?totalPrice) (count(?DatasetURI) as ?DatasetNumber) WHERE { graph ?g {?DatasetURI a dcat:Dataset; dc:publisher ?Publisher} } ORDER BY desc (?DatasetNumber)   LIMIT 100
+
+           ERROR (UNPARSED): Non-group key variable in SELECT: ?Publisher
+
+---------------- Query 7
+    01/Apr/2016:18:42:56 query:
+
+ 1: PREFIX dcat: <http://www.w3.org/ns/dcat#>
+ 2: PREFIX odp:  <http://open-data.europa.eu/ontologies/ec-odp#>
+ 3: PREFIX dc: <http://purl.org/dc/terms/>
+ 4: PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+ 5: PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+ 6:  SELECT  ?Publisher  (count(?DatasetURI) as ?DatasetNumber) WHERE { graph ?g {?DatasetURI a dcat:Dataset; dc:publisher ?Publisher} } ORDER BY desc (?DatasetNumber)  LIMIT 100
+
+           ERROR (UNPARSED): Non-group key variable in SELECT: ?Publisher
+
+************************* FILE (4) 'virtuoso_http01052016.log' *************************
+
+virtuoso_http01052016.log:  date = 2016/05/01, statistics = { total =   18, countBGP =   11, distincts = {   14/  18, 77.78% },  types = { CONSTRUCT = {    0/  14,  0.00% },  ASK = {    0/  14,  0.00% },  DESCRIBE = {    1/  14,  7.14% },  SELECT = {   13/  14, 92.86% } },  commands = { OPTIONAL = {   0/ 41,  0.00% },  FILTER = {  10/ 41, 24.39% },  REGEX = {  10/ 41, 24.39% },  DISTINCT = {   9/ 41, 21.95% },  OFFSET = {   0/ 41,  0.00% },  LIMIT = {  12/ 41, 29.27% },  GROUP BY = {   0/ 41,  0.00% },  UNION = {   0/ 41,  0.00% },  ORDER BY = {   0/ 41,  0.00% } } } 
+
+---------------- Query 1
+    01/May/2016:03:23:04 query:
+
+ 1: PREFIX dcat: <http://www.w3.org/ns/dcat#>
+ 2: PREFIX odp:  <http://open-data.europa.eu/ontologies/ec-odp#>
+ 3: PREFIX dc: <http://purl.org/dc/terms/>
+ 4: PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+ 5: PREFIX foaf: <http://xmlns.com/foaf/0.1/> select distinct ?g ?o where { graph ?g {?s dc:title ?o. filter regex(?o, 'heritage, 'i') } }   LIMIT 10
+
+           ERROR (UNPARSED): Lexical error at line 5, column 129.  Encountered: "\'" (39), after : "i"
+
+---------------- Query 2
+    01/May/2016:13:37:22 query:
+
+ 1: PREFIX dcat: <http://www.w3.org/ns/dcat#>
+ 2: PREFIX odp:  <http://open-data.europa.eu/ontologies/ec-odp#>
+ 3: PREFIX dc: <http://purl.org/dc/terms/>
+ 4: PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+ 5: PREFIX foaf: <http://xmlns.com/foaf/0.1/> select distinct ?g ?o where { graph ?g {?s dc:title ?o. filter regex(?o, 'Statistics', 'cisco') } }     LIMIT 1
+
+           ERROR (UNPARSED): Illegal flag in regex modifiers: c
+
+************************* FILE (5) 'virtuoso_http01062016.log' *************************
+
+virtuoso_http01062016.log:  date = 2016/06/01, statistics = { total =  215, countBGP =   42, distincts = {   59/ 215, 27.44% },  types = { CONSTRUCT = {    0/  59,  0.00% },  ASK = {   17/  59, 28.81% },  DESCRIBE = {    9/  59, 15.25% },  SELECT = {   31/  59, 52.54% } },  commands = { OPTIONAL = {   0/ 80,  0.00% },  FILTER = {  38/ 80, 47.50% },  REGEX = {   4/ 80,  5.00% },  DISTINCT = {  16/ 80, 20.00% },  OFFSET = {   0/ 80,  0.00% },  LIMIT = {  13/ 80, 16.25% },  GROUP BY = {   0/ 80,  0.00% },  UNION = {   5/ 80,  6.25% },  ORDER BY = {   4/ 80,  5.00% } } } 
+
+---------------- Query 1
+    01/Jun/2016:10:02:46 query:
+
+ 1: PREFIX dcat: <http://www.w3.org/ns/dcat#>
+ 2: PREFIX odp:  <http://data.europa.eu/euodp/ontologies/ec-odp#>
+ 3: PREFIX dc: <http://purl.org/dc/terms/>
+ 4: PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+ 5: PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+ 6:  SELECT  ?Publisher  (count(?DatasetURI) as ?DatasetNumber) WHERE { graph ?g {?DatasetURI a dcat:Dataset; dc:publisher ?Publisher} } ORDER BY desc (?DatasetNumber) LIMIT 10
+
+           ERROR (UNPARSED): Non-group key variable in SELECT: ?Publisher
+
+---------------- Query 2
+    01/Jun/2016:10:22:56 query:
+
+ 1: PREFIX dcat: <http://www.w3.org/ns/dcat#>
+ 2: PREFIX odp:  <http://data.europa.eu/euodp/ontologies/ec
+
+           ERROR (UNPARSED): Encountered " "<" "< "" at line 2, column 14.
+
+---------------- Query 3
+    01/Jun/2016:10:23:42 query:
+
+ 1: PREFIX dcat: <http://www.w3.org/ns/dcat#>
+ 2: PREFIX odp:  <http://data.europa.eu/euodp/ontologies/ec-odp#>
+ 3: PREFIX dc: <http://purl.org/dc/terms/>
+ 4: PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+ 5: PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+ 6:  SELECT  ?Publisher  (count(?DatasetURI) as ?DatasetNumber) WHERE { graph ?g {?DatasetURI a dcat:Dataset; dc:publisher ?Publisher} } ORDER BY desc (?DatasetNumber) LIMIT 10
+
+           ERROR (UNPARSED): Non-group key variable in SELECT: ?Publisher
+
+---------------- Query 4
+    01/Jun/2016:10:24:03 query:
+
+ 1: PREFIX dcat: <http://www.w3.org/ns/dcat#>
+ 2: PREFIX odp:  <http://data.europa.eu/euodp/ontologies/ec-odp#>
+ 3: PREFIX dc: <http://purl.org/dc/terms/>
+ 4: PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+ 5: PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+ 6:  SELECT  ?Publisher  (count(?DatasetURI) as ?DatasetNumber) WHERE { graph ?g {?DatasetURI a dcat:Dataset; dc:publisher ?Publisher} } ORDER BY desc (?DatasetNumber) LIMIT 10
+
+           ERROR (UNPARSED): Non-group key variable in SELECT: ?Publisher
+
+---------------- Query 5
+    01/Jun/2016:11:56:23 query:
+
+ 1: PREFIX dcat: <http://www.w3.org/ns/dcat#>
+ 2: PREFIX odp:  <http://data.europa.eu/euodp/ontologies/ec-odp#>
+ 3: PREFIX dc: <http://purl.org/dc/terms/>
+ 4: PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+ 5: PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+ 6:  SELECT  ?Publisher  (count(?DatasetURI) as ?DatasetNumber) WHERE { graph ?g {?DatasetURI a dcat:Dataset; dc:publisher ?Publisher} } ORDER BY desc (?DatasetNumber) LIMIT 100
+
+           ERROR (UNPARSED): Non-group key variable in SELECT: ?Publisher
+
+---------------- Query 6
+    01/Jun/2016:12:07:47 query:
+
+ 1: PREFIX dcat: <http://www.w3.org/ns/dcat#>
+ 2: PREFIX odp:  <http://data.europa.eu/euodp/ontologies/ec-odp#>
+ 3: PREFIX dc: <http://purl.org/dc/terms/>
+ 4: PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+ 5: PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+ 6:  SELECT  ?Publisher  (count(?DatasetURI) as ?DatasetNumber) WHERE { graph ?g {?DatasetURI a dcat:Dataset; dc:publisher ?Publisher} } ORDER BY desc (?DatasetNumber) LIMIT 100
+
+           ERROR (UNPARSED): Non-group key variable in SELECT: ?Publisher
+
+---------------- Query 7
+    01/Jun/2016:12:07:51 query:
+
+ 1: PREFIX dcat: <http://www.w3.org/ns/dcat#>
+ 2: PREFIX odp:  <http://data.europa.eu/euodp/ontologies/ec-odp#>
+ 3: PREFIX dc: <http://purl.org/dc/terms/>
+ 4: PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+ 5: PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+ 6:  SELECT  ?Publisher  (count(?DatasetURI) as ?DatasetNumber) WHERE { graph ?g {?DatasetURI a dcat:Dataset; dc:publisher ?Publisher} } ORDER BY desc (?DatasetNumber) LIMIT 100
+
+           ERROR (UNPARSED): Non-group key variable in SELECT: ?Publisher
+
+---------------- Query 8
+    01/Jun/2016:12:07:52 query:
+
+ 1: PREFIX dcat: <http://www.w3.org/ns/dcat#>
+ 2: PREFIX odp:  <http://data.europa.eu/euodp/ontologies/ec-odp#>
+ 3: PREFIX dc: <http://purl.org/dc/terms/>
+ 4: PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+ 5: PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+ 6:  SELECT  ?Publisher  (count(?DatasetURI) as ?DatasetNumber) WHERE { graph ?g {?DatasetURI a dcat:Dataset; dc:publisher ?Publisher} } ORDER BY desc (?DatasetNumber) LIMIT 100
+
+           ERROR (UNPARSED): Non-group key variable in SELECT: ?Publisher
+
+---------------- Query 9
+    01/Jun/2016:12:07:53 query:
+
+ 1: PREFIX dcat: <http://www.w3.org/ns/dcat#>
+ 2: PREFIX odp:  <http://data.europa.eu/euodp/ontologies/ec-odp#>
+ 3: PREFIX dc: <http://purl.org/dc/terms/>
+ 4: PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+ 5: PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+ 6:  SELECT  ?Publisher  (count(?DatasetURI) as ?DatasetNumber) WHERE { graph ?g {?DatasetURI a dcat:Dataset; dc:publisher ?Publisher} } ORDER BY desc (?DatasetNumber) LIMIT 100
+
+           ERROR (UNPARSED): Non-group key variable in SELECT: ?Publisher
+
+---------------- Query 10
+    01/Jun/2016:12:14:06 query:
+
+ 1: PREFIX dcat: <http://www.w3.org/ns/dcat#>
+ 2: PREFIX odp:  <http://data.europa.eu/euodp/ontologies/ec-odp#>
+ 3: PREFIX dc: <http://purl.org/dc/terms/>
+ 4: PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+ 5: PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+ 6:  SELECT  ?Publisher  (count(?DatasetURI) as ?DatasetNumber) WHERE { graph ?g {?DatasetURI a dcat:Dataset; dc:publisher ?Publisher} } ORDER BY desc (?DatasetNumber) LIMIT 100
+
+           ERROR (UNPARSED): Non-group key variable in SELECT: ?Publisher
+
+---------------- Query 11
+    01/Jun/2016:12:17:18 query:
+
+ 1: PREFIX dcat: <http://www.w3.org/ns/dcat#>
+ 2: PREFIX odp:  <http://data.europa.eu/euodp/ontologies/ec-odp#>
+ 3: PREFIX dc: <http://purl.org/dc/terms/>
+ 4: PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+ 5: PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+ 6:  SELECT  ?Publisher  (count(?DatasetURI) as ?DatasetNumber) WHERE { graph ?g {?DatasetURI a dcat:Dataset; dc:publisher ?Publisher} } ORDER BY desc (?DatasetNumber) LIMIT 100
+
+           ERROR (UNPARSED): Non-group key variable in SELECT: ?Publisher
+
+---------------- Query 12
+    01/Jun/2016:12:22:45 query:
+
+ 1: PREFIX dcat: <http://www.w3.org/ns/dcat#>
+ 2: PREFIX odp:  <http://data.europa.eu/euodp/ontologies/ec-odp#>
+ 3: PREFIX dc: <http://purl.org/dc/terms/>
+ 4: PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+ 5: PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+ 6:  SELECT  ?Publisher  (count(?DatasetURI) as ?DatasetNumber) WHERE { graph ?g {?DatasetURI a dcat:Dataset; dc:publisher ?Publisher} } ORDER BY desc (?DatasetNumber) LIMIT 100
+
+           ERROR (UNPARSED): Non-group key variable in SELECT: ?Publisher
+
+---------------- Query 13
+    01/Jun/2016:12:34:16 query:
+
+ 1: PREFIX dcat: <http://www.w3.org/ns/dcat#>
+ 2: PREFIX odp:  <http://data.europa.eu/euodp/ontologies/ec-odp#>
+ 3: PREFIX dc: <http://purl.org/dc/terms/>
+ 4: PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+ 5: PREFIX foaf: <http://xmlns.com/foaf/0.1/> distinct ?g ?o where { graph ?g {?s dc:title ?o. filter regex(?o, 'Statistics', 'i') } } LIMIT 10
+
+           ERROR (UNPARSED): Encountered " "distinct" "distinct "" at line 5, column 43.
+
+---------------- Query 14
+    01/Jun/2016:14:16:57 query:
+
+ 1: PREFIX dcat: <http://www.w3.org/ns/dcat#>
+ 2: PREFIX odp:  <http://data.europa.eu/euodp/ontologies/ec-odp#>
+ 3: PREFIX dc: <http://purl.org/dc/terms/>
+ 4: PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+ 5: PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+ 6:  SELECT  ?Publisher  (count(?DatasetURI) as ?DatasetNumber) WHERE { graph ?g {?DatasetURI a dcat:Dataset; dc:publisher ?Publisher} } ORDER BY desc (?DatasetNumber) LIMIT 100
+
+           ERROR (UNPARSED): Non-group key variable in SELECT: ?Publisher
+
+---------------- Query 15
+    01/Jun/2016:16:56:28 query:
+
+ 1: SELECT ?s ?p ?o
+ 2: 
+ 3: 
+ 4: FROM <http://data.lod2.eu/scoreboard/>
+ 5: WHERE { 
+ 6: 
+ 7:                 ?s ?p ?o .
+ 8: 
+ 9:                 ?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#Observation> .
+10: 
+11:                 ?s <http://purl.org/linked-data/cube#dataSet> <http://data.lod2.eu/scoreboard/ds/indicator/FOA_cit_Country__of_pub_serv_for_citizen> .
+12:  ?s <http://data.lod2.eu/scoreboard/properties/country> ?d0 .
+13:  ?s <http://data.lod2.eu/scoreboard/properties/year> ?d1 .
+14:  FILTER ( ?d0 = <http://data.lod2.eu/scoreboard/country/Greece> OR ?d0 = <http://data.lod2.eu/scoreboard/country/France> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Denmark> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Finland> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Italy> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Austria> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Ireland> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Germany> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Iceland> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Spain> ) 
+15:  FILTER ( ?d1 = <http://data.lod2.eu/scoreboard/year/2004> OR ?d1 = <http://data.lod2.eu/scoreboard/year/2002> OR ?d1 = <http://data.lod2.eu/scoreboard/year/2001> ) 
+16: }
+
+           ERROR (UNPARSED): Lexical error at line 14, column 67.  Encountered: " " (32), after : "OR"
+
+---------------- Query 16
+    02/Jun/2016:01:16:24 query:
+
+ 1: SELECT ?s ?p ?o
+ 2: 
+ 3: 
+ 4: FROM <http://data.lod2.eu/scoreboard/>
+ 5: WHERE { 
+ 6: 
+ 7:                 ?s ?p ?o .
+ 8: 
+ 9:                 ?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#Observation> .
+10: 
+11:                 ?s <http://purl.org/linked-data/cube#dataSet> <http://data.lod2.eu/scoreboard/ds/indicator/FOA_cit_Country__of_pub_serv_for_citizen> .
+12:  ?s <http://data.lod2.eu/scoreboard/properties/country> ?d0 .
+13:  ?s <http://data.lod2.eu/scoreboard/properties/year> ?d1 .
+14:  FILTER ( ?d0 = <http://data.lod2.eu/scoreboard/country/Iceland> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Denmark> OR ?d0 = <http://data.lod2.eu/scoreboard/country/France> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Ireland> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Spain> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Germany> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Finland> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Austria> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Belgium> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Italy> ) 
+15:  FILTER ( ?d1 = <http://data.lod2.eu/scoreboard/year/2003> OR ?d1 = <http://data.lod2.eu/scoreboard/year/2002> OR ?d1 = <http://data.lod2.eu/scoreboard/year/2001> ) 
+16: }
+
+           ERROR (UNPARSED): Lexical error at line 14, column 68.  Encountered: " " (32), after : "OR"
+
+---------------- Query 17
+    02/Jun/2016:01:16:43 query:
+
+ 1: SELECT ?s ?p ?o
+ 2: 
+ 3: 
+ 4: FROM <http://data.lod2.eu/scoreboard/>
+ 5: WHERE { 
+ 6: 
+ 7:                 ?s ?p ?o .
+ 8: 
+ 9:                 ?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#Observation> .
+10: 
+11:                 ?s <http://purl.org/linked-data/cube#dataSet> <http://data.lod2.eu/scoreboard/ds/indicator/FOA_cit_Country__of_pub_serv_for_citizen> .
+12:  ?s <http://data.lod2.eu/scoreboard/properties/country> ?d0 .
+13:  ?s <http://data.lod2.eu/scoreboard/properties/year> ?d1 .
+14:  FILTER ( ?d0 = <http://data.lod2.eu/scoreboard/country/Germany> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Italy> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Austria> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Denmark> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Finland> OR ?d0 = <http://data.lod2.eu/scoreboard/country/France> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Iceland> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Ireland> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Belgium> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Spain> ) 
+15:  FILTER ( ?d1 = <http://data.lod2.eu/scoreboard/year/2002> OR ?d1 = <http://data.lod2.eu/scoreboard/year/2004> OR ?d1 = <http://data.lod2.eu/scoreboard/year/2003> ) 
+16: }
+
+           ERROR (UNPARSED): Lexical error at line 14, column 68.  Encountered: " " (32), after : "OR"
+
+---------------- Query 18
+    02/Jun/2016:01:16:48 query:
+
+ 1: PREFIX qb:<http://purl.org/linked-data/cube#>
+ 2:                 ASK
+ 3: FROM <http://data.lod2.eu/scoreboard/>
+ 4: WHERE{
+ 5:                     ?dsd qb:component ?componentSpec .
+ 6:                     ?componentSpec qb:componentRequired "false"^^xsd:boolean ;
+ 7:                     qb:componentProperty ?component .
+ 8:                     FILTER NOT EXISTS { 
+ 9:                         ?component a qb:AttributeProperty 
+10:                     }
+11:                 }
+
+           ERROR (UNPARSED): Line 6, column 66: Unresolved prefixed name: xsd:boolean
+
+---------------- Query 19
+    02/Jun/2016:01:16:48 query:
+
+ 1: PREFIX qb:<http://purl.org/linked-data/cube#>
+ 2:                 ASK
+ 3: FROM <http://data.lod2.eu/scoreboard/>
+ 4: WHERE{
+ 5:                     ?dim a qb:DimensionProperty .
+ 6:                     FILTER NOT EXISTS { 
+ 7:                         ?dim rdfs:range [] 
+ 8:                     }
+ 9:                 }
+
+           ERROR (UNPARSED): Line 7, column 30: Unresolved prefixed name: rdfs:range
+
+---------------- Query 20
+    02/Jun/2016:01:16:48 query:
+
+ 1: PREFIX qb:<http://purl.org/linked-data/cube#>
+ 2:                 ASK
+ 3: FROM <http://data.lod2.eu/scoreboard/>
+ 4: WHERE{
+ 5:                     ?obs qb:dataSet ?ds .
+ 6:                     ?ds qb:structure ?dsd .
+ 7:                     ?dsd qb:component ?c .
+ 8:                     ?c qb:componentProperty ?dim .
+ 9:                     ?dim a qb:DimensionProperty ;
+10:                          qb:codeList ?list .
+11:                     ?list a skos:Collection .
+12:                     ?obs ?dim ?v .
+13:                     FILTER NOT EXISTS { 
+14:                         ?v a skos:Concept . 
+15:                         ?list skos:member ?v 
+16:                     }
+17:                 }
+
+           ERROR (UNPARSED): Line 11, column 29: Unresolved prefixed name: skos:Collection
+
+---------------- Query 21
+    02/Jun/2016:01:16:48 query:
+
+ 1: PREFIX qb:<http://purl.org/linked-data/cube#>
+ 2:                 SELECT ?p 
+ 3:                 
+ 4: 
+ 5: FROM <http://data.lod2.eu/scoreboard/>
+ 6: WHERE {
+ 7:                     ?hierarchy a qb:HierarchicalCodeList;
+ 8:                                qb:parentChildProperty ?pcp .
+ 9:                     FILTER( 
+10:                         isBlank(?pcp) 
+11:                     )
+12:                     ?pcp owl:inverseOf ?p .                    
+13:                     FILTER( isIRI(?p) )
+14:                 }
+
+           ERROR (UNPARSED): Line 12, column 26: Unresolved prefixed name: owl:inverseOf
+
+---------------- Query 22
+    02/Jun/2016:01:16:48 query:
+
+ 1: PREFIX qb:<http://purl.org/linked-data/cube#>
+ 2:                 ASK
+ 3: FROM <http://data.lod2.eu/scoreboard/>
+ 4: WHERE{
+ 5:                     ?obs qb:dataSet ?ds .
+ 6:                     ?ds qb:structure ?dsd .
+ 7:                     ?dsd qb:component ?component .
+ 8:                     ?component qb:componentRequired "true"^^xsd:boolean ;
+ 9:                                qb:componentProperty ?attr .
+10:                     FILTER NOT EXISTS { 
+11:                         ?obs ?attr [] 
+12:                     }
+13:                 }
+
+           ERROR (UNPARSED): Line 8, column 61: Unresolved prefixed name: xsd:boolean
+
+---------------- Query 23
+    02/Jun/2016:01:16:48 query:
+
+ 1: PREFIX qb:<http://purl.org/linked-data/cube#>
+ 2:                 ASK
+ 3: FROM <http://data.lod2.eu/scoreboard/>
+ 4: WHERE{
+ 5:                     ?obs qb:dataSet ?ds .
+ 6:                     ?ds qb:structure ?dsd .
+ 7:                     ?dsd qb:component ?c .
+ 8:                     ?c qb:componentProperty ?dim .
+ 9:                     ?dim a qb:DimensionProperty ;
+10:                          qb:codeList ?list .
+11:                     ?list a skos:ConceptScheme .
+12:                     ?obs ?dim ?v .
+13:                     FILTER NOT EXISTS { 
+14:                         ?v a skos:Concept ; 
+15:                            skos:inScheme ?list 
+16:                     }
+17:                 }
+
+           ERROR (UNPARSED): Line 11, column 29: Unresolved prefixed name: skos:ConceptScheme
+
+************************* FILE (6) 'virtuoso_http01072016.log' *************************
+
+virtuoso_http01072016.log:  date = 2016/07/01, statistics = { total =  906, countBGP =  376, distincts = {  475/ 906, 52.43% },  types = { CONSTRUCT = {    0/ 475,  0.00% },  ASK = {    0/ 475,  0.00% },  DESCRIBE = {   88/ 475, 18.53% },  SELECT = {  387/ 475, 81.47% } },  commands = { OPTIONAL = {   0/766,  0.00% },  FILTER = {  28/766,  3.66% },  REGEX = {   5/766,  0.65% },  DISTINCT = {   2/766,  0.26% },  OFFSET = { 360/766, 47.00% },  LIMIT = { 368/766, 48.04% },  GROUP BY = {   0/766,  0.00% },  UNION = {   1/766,  0.13% },  ORDER BY = {   2/766,  0.26% } } } 
+
+---------------- Query 1
+    01/Jul/2016:11:19:31 query:
+
+ 1: SELECT ?s ?p ?o
+ 2: 
+ 3: 
+ 4: FROM <http://data.lod2.eu/scoreboard/>
+ 5: WHERE { 
+ 6: 
+ 7:                 ?s ?p ?o .
+ 8: 
+ 9:                 ?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#Observation> .
+10: 
+11:                 ?s <http://purl.org/linked-data/cube#dataSet> <http://data.lod2.eu/scoreboard/ds/indicator/FOA_cit_Country__of_pub_serv_for_citizen> .
+12:  ?s <http://data.lod2.eu/scoreboard/properties/country> ?d0 .
+13:  ?s <http://data.lod2.eu/scoreboard/properties/year> ?d1 .
+14:  FILTER ( ?d0 = <http://data.lod2.eu/scoreboard/country/Austria> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Belgium> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Italy> OR ?d0 = <http://data.lod2.eu/scoreboard/country/France> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Iceland> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Finland> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Spain> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Ireland> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Germany> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Denmark> ) 
+15:  FILTER ( ?d1 = <http://data.lod2.eu/scoreboard/year/2003> OR ?d1 = <http://data.lod2.eu/scoreboard/year/2001> OR ?d1 = <http://data.lod2.eu/scoreboard/year/2004> ) 
+16: }
+
+           ERROR (UNPARSED): Lexical error at line 14, column 68.  Encountered: " " (32), after : "OR"
+
+---------------- Query 2
+    01/Jul/2016:11:20:57 query:
+
+ 1: PREFIX dcat: <http://www.w3.org/ns/dcat#>
+ 2: PREFIX odp:  <http://data.europa.eu/euodp/ontologies/ec-odp#>
+ 3: PREFIX dc: <http://purl.org/dc/terms/>
+ 4: PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+ 5: PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+ 6:  SELECT  ?Graph ?DatasetTitle: International Trade  ?Publisher ?DatasetURI WHERE { graph ?Graph  {?DatasetURI a <http://www.w3.org/ns/dcat#Dataset>; dc:publisher ?Publisher; dc:title ?DatasetTitle. FILTER(regex(?DatasetTitle, "Register of Commission documents" ,"i")) }  } LIMIT 10
+
+           ERROR (UNPARSED): Line 6, column 30: Unresolved prefixed name: :
+
+---------------- Query 3
+    01/Jul/2016:11:22:11 query:
+
+ 1: SELECT ?s ?p ?o
+ 2: 
+ 3: 
+ 4: FROM <http://data.lod2.eu/scoreboard/>
+ 5: WHERE { 
+ 6: 
+ 7:                 ?s ?p ?o .
+ 8: 
+ 9:                 ?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#Observation> .
+10: 
+11:                 ?s <http://purl.org/linked-data/cube#dataSet> <http://data.lod2.eu/scoreboard/ds/indicator/FOA_cit_Country__of_pub_serv_for_citizen> .
+12:  ?s <http://data.lod2.eu/scoreboard/properties/country> ?d0 .
+13:  ?s <http://data.lod2.eu/scoreboard/properties/year> ?d1 .
+14:  FILTER ( ?d0 = <http://data.lod2.eu/scoreboard/country/Italy> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Germany> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Belgium> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Ireland> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Greece> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Austria> OR ?d0 = <http://data.lod2.eu/scoreboard/country/France> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Iceland> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Spain> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Denmark> ) 
+15:  FILTER ( ?d1 = <http://data.lod2.eu/scoreboard/year/2001> OR ?d1 = <http://data.lod2.eu/scoreboard/year/2002> OR ?d1 = <http://data.lod2.eu/scoreboard/year/2003> ) 
+16: }
+
+           ERROR (UNPARSED): Lexical error at line 14, column 66.  Encountered: " " (32), after : "OR"
+
+---------------- Query 4
+    01/Jul/2016:11:22:19 query:
+
+ 1: SELECT ?s ?p ?o
+ 2: 
+ 3: 
+ 4: FROM <http://data.lod2.eu/scoreboard/>
+ 5: WHERE { 
+ 6: 
+ 7:                 ?s ?p ?o .
+ 8: 
+ 9:                 ?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#Observation> .
+10: 
+11:                 ?s <http://purl.org/linked-data/cube#dataSet> <http://data.lod2.eu/scoreboard/ds/indicator/FOA_cit_Country__of_pub_serv_for_citizen> .
+12:  ?s <http://data.lod2.eu/scoreboard/properties/country> ?d0 .
+13:  ?s <http://data.lod2.eu/scoreboard/properties/year> ?d1 .
+14:  FILTER ( ?d0 = <http://data.lod2.eu/scoreboard/country/Denmark> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Finland> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Austria> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Belgium> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Ireland> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Germany> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Iceland> OR ?d0 = <http://data.lod2.eu/scoreboard/country/France> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Italy> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Spain> ) 
+15:  FILTER ( ?d1 = <http://data.lod2.eu/scoreboard/year/2003> OR ?d1 = <http://data.lod2.eu/scoreboard/year/2002> OR ?d1 = <http://data.lod2.eu/scoreboard/year/2001> ) 
+16: }
+
+           ERROR (UNPARSED): Lexical error at line 14, column 68.  Encountered: " " (32), after : "OR"
+
+---------------- Query 5
+    01/Jul/2016:11:24:04 query:
+
+ 1: SELECT ?s ?p ?o
+ 2: 
+ 3: 
+ 4: FROM <http://data.lod2.eu/scoreboard/>
+ 5: WHERE { 
+ 6: 
+ 7:                 ?s ?p ?o .
+ 8: 
+ 9:                 ?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#Observation> .
+10: 
+11:                 ?s <http://purl.org/linked-data/cube#dataSet> <http://data.lod2.eu/scoreboard/ds/indicator/FOA_cit_Country__of_pub_serv_for_citizen> .
+12:  ?s <http://data.lod2.eu/scoreboard/properties/country> ?d0 .
+13:  ?s <http://data.lod2.eu/scoreboard/properties/year> ?d1 .
+14:  FILTER ( ?d0 = <http://data.lod2.eu/scoreboard/country/Italy> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Belgium> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Germany> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Austria> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Ireland> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Denmark> OR ?d0 = <http://data.lod2.eu/scoreboard/country/France> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Spain> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Iceland> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Finland> ) 
+15:  FILTER ( ?d1 = <http://data.lod2.eu/scoreboard/year/2004> OR ?d1 = <http://data.lod2.eu/scoreboard/year/2003> OR ?d1 = <http://data.lod2.eu/scoreboard/year/2002> ) 
+16: }
+
+           ERROR (UNPARSED): Lexical error at line 14, column 66.  Encountered: " " (32), after : "OR"
+
+---------------- Query 6
+    01/Jul/2016:11:24:39 query:
+
+ 1: SELECT ?s ?p ?o
+ 2: 
+ 3: 
+ 4: FROM <http://data.lod2.eu/scoreboard/>
+ 5: WHERE { 
+ 6: 
+ 7:                 ?s ?p ?o .
+ 8: 
+ 9:                 ?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#Observation> .
+10: 
+11:                 ?s <http://purl.org/linked-data/cube#dataSet> <http://data.lod2.eu/scoreboard/ds/indicator/FOA_cit_Country__of_pub_serv_for_citizen> .
+12:  ?s <http://data.lod2.eu/scoreboard/properties/country> ?d0 .
+13:  ?s <http://data.lod2.eu/scoreboard/properties/year> ?d1 .
+14:  FILTER ( ?d0 = <http://data.lod2.eu/scoreboard/country/Belgium> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Iceland> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Italy> OR ?d0 = <http://data.lod2.eu/scoreboard/country/France> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Austria> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Finland> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Spain> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Ireland> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Denmark> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Germany> ) 
+15:  FILTER ( ?d1 = <http://data.lod2.eu/scoreboard/year/2001> OR ?d1 = <http://data.lod2.eu/scoreboard/year/2004> OR ?d1 = <http://data.lod2.eu/scoreboard/year/2002> ) 
+16: }
+
+           ERROR (UNPARSED): Lexical error at line 14, column 68.  Encountered: " " (32), after : "OR"
+
+---------------- Query 7
+    01/Jul/2016:11:27:14 query:
+
+ 1: PREFIX dcat: <http://www.w3.org/ns/dcat#>
+ 2: PREFIX odp:  <http://data.europa.eu/euodp/ontologies/ec-odp#>
+ 3: PREFIX dc: <http://purl.org/dc/terms/>
+ 4: PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+ 5: PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+ 6:  SELECT  ?Graph ?DatasetTitle  ?Publisher ?DatasetURI WHERE { graph ?Graph  {?DatasetURI a <http://www.w3.org/ns/dcat#Dataset>; dc:publisher ?Publisher; dc:title "International Trade" ?DatasetTitle. FILTER(regex(?DatasetTitle, "Register of Commission documents" ,"i")) }  }  LIMIT 10
+
+           ERROR (UNPARSED): Encountered " <VAR1> "?DatasetTitle "" at line 6, column 185.
+
+---------------- Query 8
+    01/Jul/2016:11:31:27 query:
+
+ 1: SELECT ?s ?p ?o
+ 2: 
+ 3: 
+ 4: FROM <http://data.lod2.eu/scoreboard/>
+ 5: WHERE { 
+ 6: 
+ 7:                 ?s ?p ?o .
+ 8: 
+ 9:                 ?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#Observation> .
+10: 
+11:                 ?s <http://purl.org/linked-data/cube#dataSet> <http://data.lod2.eu/scoreboard/ds/indicator/FOA_cit_Country__of_pub_serv_for_citizen> .
+12:  ?s <http://data.lod2.eu/scoreboard/properties/country> ?d0 .
+13:  ?s <http://data.lod2.eu/scoreboard/properties/year> ?d1 .
+14:  FILTER ( ?d0 = <http://data.lod2.eu/scoreboard/country/Germany> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Greece> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Spain> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Austria> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Italy> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Belgium> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Ireland> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Finland> OR ?d0 = <http://data.lod2.eu/scoreboard/country/France> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Iceland> ) 
+15:  FILTER ( ?d1 = <http://data.lod2.eu/scoreboard/year/2002> OR ?d1 = <http://data.lod2.eu/scoreboard/year/2004> OR ?d1 = <http://data.lod2.eu/scoreboard/year/2001> ) 
+16: }
+
+           ERROR (UNPARSED): Lexical error at line 14, column 68.  Encountered: " " (32), after : "OR"
+
+---------------- Query 9
+    01/Jul/2016:11:57:31 query:
+
+ 1: SELECT ?s ?p ?o
+ 2: 
+ 3: 
+ 4: FROM <http://data.lod2.eu/scoreboard/>
+ 5: WHERE { 
+ 6: 
+ 7:                 ?s ?p ?o .
+ 8: 
+ 9:                 ?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#Observation> .
+10: 
+11:                 ?s <http://purl.org/linked-data/cube#dataSet> <http://data.lod2.eu/scoreboard/ds/indicator/FOA_cit_Country__of_pub_serv_for_citizen> .
+12:  ?s <http://data.lod2.eu/scoreboard/properties/country> ?d0 .
+13:  ?s <http://data.lod2.eu/scoreboard/properties/year> ?d1 .
+14:  FILTER ( ?d0 = <http://data.lod2.eu/scoreboard/country/Austria> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Iceland> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Ireland> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Belgium> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Greece> OR ?d0 = <http://data.lod2.eu/scoreboard/country/France> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Finland> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Italy> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Denmark> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Germany> ) 
+15:  FILTER ( ?d1 = <http://data.lod2.eu/scoreboard/year/2003> OR ?d1 = <http://data.lod2.eu/scoreboard/year/2004> OR ?d1 = <http://data.lod2.eu/scoreboard/year/2002> ) 
+16: }
+
+           ERROR (UNPARSED): Lexical error at line 14, column 68.  Encountered: " " (32), after : "OR"
+
+---------------- Query 10
+    01/Jul/2016:14:02:35 query:
+
+ 1: PREFIX dcat: <http://www.w3.org/ns/dcat#>
+ 2: PREFIX dc: <http://purl.org/dc/terms/>
+ 3: SELECT  ?Publisher  (count(?DatasetURI) as ?DatasetNumber) WHERE { graph ?g {?DatasetURI a dcat:Dataset; dc:publisher ?Publisher} } ORDER BY desc (?DatasetNumber) LIMIT 100
+
+           ERROR (UNPARSED): Non-group key variable in SELECT: ?Publisher
+
+---------------- Query 11
+    01/Jul/2016:15:57:01 query:
+
+ 1: PREFIX dcat: <http://www.w3.org/ns/dcat#>
+ 2: PREFIX odp:  <http://open-data.europa.eu/ontologies/ec-odp#>
+ 3: PREFIX dc: <http://purl.org/dc/terms/>
+ 4: PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+ 5: PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT count(?g) ?format
+ 6: WHERE { GRAPH ?g { ?s a dcat:Dataset.
+ 7: ?s dcat:distribution ?d.
+ 8: ?d odp:distributionFormat ?format.}}
+
+           ERROR (UNPARSED): Non-group key variable in SELECT: ?format
+
+---------------- Query 12
+    01/Jul/2016:15:58:16 query:
+
+ 1: PREFIX dcat: <http://www.w3.org/ns/dcat#>
+ 2: PREFIX odp:  <http://open-data.europa.eu/ontologies/ec-odp#>
+ 3: PREFIX dc: <http://purl.org/dc/terms/>
+ 4: PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+ 5: PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT count(?g) ?format
+ 6: WHERE { GRAPH ?g { ?s a dcat:Dataset.
+ 7: ?s dcat:distribution ?d.
+ 8: ?d odp:distributionFormat ?format.}}
+
+           ERROR (UNPARSED): Non-group key variable in SELECT: ?format
+
+---------------- Query 13
+    01/Jul/2016:15:58:23 query:
+
+ 1: PREFIX dcat: <http://www.w3.org/ns/dcat#>
+ 2: PREFIX odp:  <http://open-data.europa.eu/ontologies/ec-odp#>
+ 3: PREFIX dc: <http://purl.org/dc/terms/>
+ 4: PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+ 5: PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT count(?g) ?format
+ 6: WHERE { GRAPH ?g { ?s a dcat:Dataset.
+ 7: ?s dcat:distribution ?d.
+ 8: ?d odp:distributionFormat ?format.}}
+
+           ERROR (UNPARSED): Non-group key variable in SELECT: ?format
+
+---------------- Query 14
+    01/Jul/2016:16:07:27 query:
+
+ 1: PREFIX dcat: <http://www.w3.org/ns/dcat#>
+ 2: PREFIX odp:  <http://open-data.europa.eu/ontologies/ec-odp#>
+ 3: PREFIX dc: <http://purl.org/dc/terms/>
+ 4: PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+ 5: PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT count(?g) ?format
+ 6: WHERE { GRAPH ?g { ?s a dcat:Dataset.
+ 7: ?s dcat:distribution ?d.
+ 8: ?d odp:distributionFormat ?format.}}
+
+           ERROR (UNPARSED): Non-group key variable in SELECT: ?format
+
+---------------- Query 15
+    01/Jul/2016:16:11:56 query:
+
+ 1: PREFIX dcat: <http://www.w3.org/ns/dcat#>
+ 2: PREFIX dc: <http://purl.org/dc/terms/>
+ 3: SELECT  ?Publisher  (count(?DatasetURI) as ?DatasetNumber) WHERE { graph ?g {?DatasetURI a dcat:Dataset; dc:publisher ?Publisher} } ORDER BY desc (?DatasetNumber) LIMIT 100
+
+           ERROR (UNPARSED): Non-group key variable in SELECT: ?Publisher
+
+---------------- Query 16
+    01/Jul/2016:16:41:37 query:
+
+ 1: PREFIX dcat: <http://www.w3.org/ns/dcat#>
+ 2: PREFIX dc: <http://purl.org/dc/terms/>
+ 3: SELECT  ?Publisher  (count(?DatasetURI) as ?DatasetNumber) WHERE { graph ?g {?DatasetURI a dcat:Dataset; dc:publisher ?Publisher} } ORDER BY desc (?DatasetNumber) LIMIT 100
+
+           ERROR (UNPARSED): Non-group key variable in SELECT: ?Publisher
+
+---------------- Query 17
+    01/Jul/2016:17:01:15 query:
+
+ 1: SELECT ?s ?p ?o
+ 2: 
+ 3: 
+ 4: FROM <http://data.lod2.eu/scoreboard/>
+ 5: WHERE { 
+ 6: 
+ 7:                 ?s ?p ?o .
+ 8: 
+ 9:                 ?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#Observation> .
+10: 
+11:                 ?s <http://purl.org/linked-data/cube#dataSet> <http://data.lod2.eu/scoreboard/ds/indicator/FOA_cit_Country__of_pub_serv_for_citizen> .
+12:  ?s <http://data.lod2.eu/scoreboard/properties/country> ?d0 .
+13:  ?s <http://data.lod2.eu/scoreboard/properties/year> ?d1 .
+14:  FILTER ( ?d0 = <http://data.lod2.eu/scoreboard/country/Finland> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Spain> OR ?d0 = <http://data.lod2.eu/scoreboard/country/France> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Greece> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Iceland> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Ireland> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Austria> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Germany> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Belgium> OR ?d0 = <http://data.lod2.eu/scoreboard/country/Denmark> ) 
+15:  FILTER ( ?d1 = <http://data.lod2.eu/scoreboard/year/2001> OR ?d1 = <http://data.lod2.eu/scoreboard/year/2003> OR ?d1 = <http://data.lod2.eu/scoreboard/year/2004> ) 
+16: }
+
+           ERROR (UNPARSED): Lexical error at line 14, column 68.  Encountered: " " (32), after : "OR"
+
+---------------- Query 18
+    02/Jul/2016:01:14:43 query:
+
+ 1: PREFIX dcat: <http://www.w3.org/ns/dcat#>
+ 2: PREFIX dc: <http://purl.org/dc/terms/>
+ 3: SELECT  ?Publisher  (count(?DatasetURI) as ?DatasetNumber) WHERE { graph ?g {?DatasetURI a dcat:Dataset; dc:publisher ?Publisher} } ORDER BY desc (?DatasetNumber) LIMIT 100
+
+           ERROR (UNPARSED): Non-group key variable in SELECT: ?Publisher
+
+
+******************************** STATISTICS *******************************
+
+Duplicate queries:                       832 / 1458,  57.06%
+
+Distinct queries - number of ASK:         17 /  626,   2.72%
+Distinct queries - number of DESCRIBE:   146 /  626,  23.32%
+Distinct queries - number of SELECT:     460 /  626,  73.48%
+Distinct queries - number of CONSTRUCT:    0 /  626,   0.00%
+
+********************************** TOTAL **********************************
+
+      7 FILES                   with errors:  6
+                       with distinct errors:  6
+   1458 QUERIES                 with errors:  encoded = 0, unparsed = {   72 / 1458,  4.94% } 
+                       with distinct errors:  encoded = 0, unparsed = {   53 /  626,  8.47% } 
+
+Total time: 00 m 03.530 s

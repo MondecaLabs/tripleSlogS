@@ -1,0 +1,22 @@
+Mode: TEST
+Type: GDB
+Path: Logs/GDB
+
+************************** LOG FILES WITH ERRORS **************************
+
+
+******************************** STATISTICS *******************************
+
+Duplicate queries:                       48 / 155,  30.97%
+
+Distinct queries - number of ASK:         2 / 107,   1.87%
+Distinct queries - number of DESCRIBE:    0 / 107,   0.00%
+Distinct queries - number of SELECT:    101 / 107,  94.39%
+Distinct queries - number of CONSTRUCT:   4 / 107,   3.74%
+
+********************************** TOTAL **********************************
+
+      5 FILES                   with errors:  0
+    155 QUERIES                 with errors:  0
+
+Total time: 00 m 01.749 s

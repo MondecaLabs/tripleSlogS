@@ -1,0 +1,31 @@
+Mode: LOAD
+Type: Virtuoso_http
+Path: Logs/V_http
+
+******************************** LOG FILES ********************************
+
+virtuoso_http01012016.log:  date = 2016/01/01, statistics = { total =    3, countBGP =    1, distincts = {    1/   3, 33.33% },  types = { CONSTRUCT = {    0/   1,  0.00% },  ASK = {    0/   1,  0.00% },  DESCRIBE = {    0/   1,  0.00% },  SELECT = {    1/   1,100.00% } },  commands = { OPTIONAL = {   0/  4,  0.00% },  FILTER = {   1/  4, 25.00% },  REGEX = {   1/  4, 25.00% },  DISTINCT = {   1/  4, 25.00% },  OFFSET = {   0/  4,  0.00% },  LIMIT = {   1/  4, 25.00% },  GROUP BY = {   0/  4,  0.00% },  UNION = {   0/  4,  0.00% },  ORDER BY = {   0/  4,  0.00% } } } 
+virtuoso_http01022016.log:  date = 2016/02/01, statistics = { total =  218, countBGP =    9, distincts = {   61/ 218, 27.98% },  types = { CONSTRUCT = {    0/  61,  0.00% },  ASK = {    0/  61,  0.00% },  DESCRIBE = {   50/  61, 81.97% },  SELECT = {   10/  61, 16.39% } },  commands = { OPTIONAL = {   0/ 27,  0.00% },  FILTER = {   8/ 27, 29.63% },  REGEX = {   4/ 27, 14.81% },  DISTINCT = {   5/ 27, 18.52% },  OFFSET = {   0/ 27,  0.00% },  LIMIT = {   6/ 27, 22.22% },  GROUP BY = {   0/ 27,  0.00% },  UNION = {   1/ 27,  3.70% },  ORDER BY = {   3/ 27, 11.11% } } } 
+virtuoso_http01032016.log:  date = 2016/03/01, statistics = { total =   72, countBGP =   11, distincts = {   31/  72, 43.06% },  types = { CONSTRUCT = {    0/  31,  0.00% },  ASK = {    0/  31,  0.00% },  DESCRIBE = {    3/  31,  9.68% },  SELECT = {   28/  31, 90.32% } },  commands = { OPTIONAL = {   0/ 58,  0.00% },  FILTER = {  41/ 58, 70.69% },  REGEX = {   4/ 58,  6.90% },  DISTINCT = {   3/ 58,  5.17% },  OFFSET = {   0/ 58,  0.00% },  LIMIT = {   7/ 58, 12.07% },  GROUP BY = {   0/ 58,  0.00% },  UNION = {   2/ 58,  3.45% },  ORDER BY = {   1/ 58,  1.72% } } } 
+virtuoso_http01042016.log:  date = 2016/04/01, statistics = { total =   26, countBGP =    8, distincts = {   13/  26, 50.00% },  types = { CONSTRUCT = {    0/  13,  0.00% },  ASK = {    0/  13,  0.00% },  DESCRIBE = {    0/  13,  0.00% },  SELECT = {   13/  13,100.00% } },  commands = { OPTIONAL = {   0/ 28,  0.00% },  FILTER = {   3/ 28, 10.71% },  REGEX = {   3/ 28, 10.71% },  DISTINCT = {   3/ 28, 10.71% },  OFFSET = {   0/ 28,  0.00% },  LIMIT = {  13/ 28, 46.43% },  GROUP BY = {   0/ 28,  0.00% },  UNION = {   0/ 28,  0.00% },  ORDER BY = {   6/ 28, 21.43% } } } 
+virtuoso_http01052016.log:  date = 2016/05/01, statistics = { total =   18, countBGP =   11, distincts = {   14/  18, 77.78% },  types = { CONSTRUCT = {    0/  14,  0.00% },  ASK = {    0/  14,  0.00% },  DESCRIBE = {    1/  14,  7.14% },  SELECT = {   13/  14, 92.86% } },  commands = { OPTIONAL = {   0/ 41,  0.00% },  FILTER = {  10/ 41, 24.39% },  REGEX = {  10/ 41, 24.39% },  DISTINCT = {   9/ 41, 21.95% },  OFFSET = {   0/ 41,  0.00% },  LIMIT = {  12/ 41, 29.27% },  GROUP BY = {   0/ 41,  0.00% },  UNION = {   0/ 41,  0.00% },  ORDER BY = {   0/ 41,  0.00% } } } 
+virtuoso_http01062016.log:  date = 2016/06/01, statistics = { total =  215, countBGP =   42, distincts = {   59/ 215, 27.44% },  types = { CONSTRUCT = {    0/  59,  0.00% },  ASK = {   17/  59, 28.81% },  DESCRIBE = {    9/  59, 15.25% },  SELECT = {   31/  59, 52.54% } },  commands = { OPTIONAL = {   0/ 80,  0.00% },  FILTER = {  38/ 80, 47.50% },  REGEX = {   4/ 80,  5.00% },  DISTINCT = {  16/ 80, 20.00% },  OFFSET = {   0/ 80,  0.00% },  LIMIT = {  13/ 80, 16.25% },  GROUP BY = {   0/ 80,  0.00% },  UNION = {   5/ 80,  6.25% },  ORDER BY = {   4/ 80,  5.00% } } } 
+virtuoso_http01072016.log:  date = 2016/07/01, statistics = { total =  906, countBGP =  376, distincts = {  475/ 906, 52.43% },  types = { CONSTRUCT = {    0/ 475,  0.00% },  ASK = {    0/ 475,  0.00% },  DESCRIBE = {   88/ 475, 18.53% },  SELECT = {  387/ 475, 81.47% } },  commands = { OPTIONAL = {   0/766,  0.00% },  FILTER = {  28/766,  3.66% },  REGEX = {   5/766,  0.65% },  DISTINCT = {   2/766,  0.26% },  OFFSET = { 360/766, 47.00% },  LIMIT = { 368/766, 48.04% },  GROUP BY = {   0/766,  0.00% },  UNION = {   1/766,  0.13% },  ORDER BY = {   2/766,  0.26% } } } 
+
+******************************** STATISTICS *******************************
+
+Duplicate queries:                       832 / 1458,  57.06%
+
+Distinct queries - number of ASK:         17 /  626,   2.72%
+Distinct queries - number of DESCRIBE:   146 /  626,  23.32%
+Distinct queries - number of SELECT:     460 /  626,  73.48%
+Distinct queries - number of CONSTRUCT:    0 /  626,   0.00%
+
+********************************** TOTAL **********************************
+
+      7 FILES                   with errors:  6
+                       with distinct errors:  6
+   1458 QUERIES                 with errors:  encoded = 0, unparsed = {   72 / 1458,  4.94% } 
+                       with distinct errors:  encoded = 0, unparsed = {   53 /  626,  8.47% } 
+
+Total time: 00 m 00.179 s

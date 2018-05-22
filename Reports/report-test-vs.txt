@@ -1,0 +1,26 @@
+Mode: TEST
+Type: Virtuoso_sparql
+Path: Logs/V_sparql
+
+************************** LOG FILES WITH ERRORS **************************
+
+000004_31995L0046__%7D+bind((if(bound(:  
+                statistics = { total = 1, countBGP = 0, distincts = { 1/1, 100.00% },  types = { CONSTRUCT = { 0/1,   0.00% },  ASK = { 0/1,   0.00% },  DESCRIBE = { 0/1,   0.00% },  SELECT = { 1/1, 100.00% } },  commands = { OPTIONAL = { 14/20, 70.00% },  FILTER = {  1/20,  5.00% },  REGEX = {  1/20,  5.00% },  DISTINCT = {  3/20, 15.00% },  OFFSET = {  0/20,  0.00% },  LIMIT = {  0/20,  0.00% },  GROUP BY = {  0/20,  0.00% },  UNION = {  0/20,  0.00% },  ORDER BY = {  1/20,  5.00% } } } 
+
+******************************** STATISTICS *******************************
+
+Duplicate queries:                      3 / 6,  50.00%
+
+Distinct queries - number of ASK:       0 / 3,   0.00%
+Distinct queries - number of DESCRIBE:  0 / 3,   0.00%
+Distinct queries - number of SELECT:    3 / 3, 100.00%
+Distinct queries - number of CONSTRUCT: 0 / 3,   0.00%
+
+********************************** TOTAL **********************************
+
+     10 FILES                   with errors:  1
+                       with distinct errors:  1
+      6 QUERIES                 with errors:  encoded = 0, unparsed = {    1 /    6, 16.67% } 
+                       with distinct errors:  encoded = 0, unparsed = {    1 /    3, 33.33% } 
+
+Total time: 00 m 00.189 s

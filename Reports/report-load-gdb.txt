@@ -1,0 +1,10 @@
+Mode: LOAD
+Type: GDB
+Path: Logs/GDB
+
+******************************** LOG FILES ********************************
+
+
+Don't found data in db.
+
+Total time: 00 m 00.002 s
