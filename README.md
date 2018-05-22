@@ -7,7 +7,8 @@ Repository for a JAVA tool based application for gathering statistics out of SPA
 
 
 # Example Usage
-`HELP action:
+`
+	HELP action:
         java -jar TriplesLogs.jar [|-h|--h|-help|--help]
 
      TEST action:
