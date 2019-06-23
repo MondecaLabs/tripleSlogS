@@ -1,0 +1,237 @@
+[DEBUG] 2016-09-23 10:08:38,456 [repositories/trees | c.o.t.q.LoggingClosableIteration] Query executed successfully
+<?xml version='1.0'?>
+<query includeInferred='true' maxExecutionTime='0'>
+	<body>PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+SELECT DISTINCT ?s  ?o 
+FROM &lt;http://data.lof.com/tree&gt; WHERE {
+	?s rdfs:comment ?o .
+   
+    filter ((?o != "N/A") &amp;&amp; (?o != "0"))
+    filter (regex (?o , "erreur","i"))
+    
+}  limit 1000 offset 0</body>
+	<dataset>
+		<defaultGraphs>
+			<graph>http://data.lof.com/tree</graph>
+		</defaultGraphs>
+		<namedGraphs>
+		</namedGraphs>
+		<defaultRemoveGraphs>
+		</defaultRemoveGraphs>
+	</dataset>
+</query>
+
+[DEBUG] 2016-09-23 10:08:38,802 [repositories/trees | c.o.t.q.LoggingClosableIteration] Query executed successfully
+<?xml version='1.0'?>
+<query includeInferred='true' maxExecutionTime='0'>
+	<body>PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+SELECT DISTINCT ?s  ?o 
+FROM &lt;http://data.lof.com/tree&gt; WHERE {
+	?s rdfs:comment ?o .
+   
+    filter ((?o != "N/A") &amp;&amp; (?o != "0"))
+    filter (regex (?o , "erreur","i"))
+    
+} </body>
+	<dataset>
+		<defaultGraphs>
+			<graph>http://data.lof.com/tree</graph>
+			<graph>http://www.ontotext.com/count</graph>
+		</defaultGraphs>
+		<namedGraphs>
+		</namedGraphs>
+		<defaultRemoveGraphs>
+		</defaultRemoveGraphs>
+	</dataset>
+</query>
+
+[DEBUG] 2016-09-23 10:13:14,896 [repositories/trees | c.o.t.q.LoggingClosableIteration] Query executed successfully
+<?xml version='1.0'?>
+<query includeInferred='true' maxExecutionTime='0'>
+	<body>PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+SELECT DISTINCT ?s  ?o 
+FROM &lt;http://data.lof.com/tree&gt; WHERE {
+	?s rdfs:comment ?o .
+   
+    filter ((?o != "N/A") &amp;&amp; (?o != "0"))
+    filter (regex (?o , "erreur","i"))
+    
+}  limit 1000 offset 0</body>
+	<dataset>
+		<defaultGraphs>
+			<graph>http://data.lof.com/tree</graph>
+		</defaultGraphs>
+		<namedGraphs>
+		</namedGraphs>
+		<defaultRemoveGraphs>
+		</defaultRemoveGraphs>
+	</dataset>
+</query>
+
+[DEBUG] 2016-09-23 10:13:15,054 [repositories/trees | c.o.t.q.LoggingClosableIteration] Query executed successfully
+<?xml version='1.0'?>
+<query includeInferred='true' maxExecutionTime='0'>
+	<body>PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+SELECT DISTINCT ?s  ?o 
+FROM &lt;http://data.lof.com/tree&gt; WHERE {
+	?s rdfs:comment ?o .
+   
+    filter ((?o != "N/A") &amp;&amp; (?o != "0"))
+    filter (regex (?o , "erreur","i"))
+    
+} </body>
+	<dataset>
+		<defaultGraphs>
+			<graph>http://data.lof.com/tree</graph>
+			<graph>http://www.ontotext.com/count</graph>
+		</defaultGraphs>
+		<namedGraphs>
+		</namedGraphs>
+		<defaultRemoveGraphs>
+		</defaultRemoveGraphs>
+	</dataset>
+</query>
+
+[DEBUG] 2016-09-23 10:13:19,752 [repositories/trees | c.o.t.q.LoggingClosableIteration] Query executed successfully
+<?xml version='1.0'?>
+<query includeInferred='true' maxExecutionTime='0'>
+	<body>PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+SELECT DISTINCT ?s  ?o
+FROM &lt;http://data.lof.com/tree&gt; WHERE {
+	?s rdfs:comment ?o .
+   # ?s &lt;http://data.lof.com/def/tonto#genreBotanique&gt; ?o
+     #   BIND(LCASE(?o) AS ?or)
+    filter ((?o != "N/A") &amp;&amp; (?o != "0"))
+    filter (regex (?o , "erreur","i"))
+    
+}  limit 1000 offset 0</body>
+	<dataset>
+		<defaultGraphs>
+			<graph>http://data.lof.com/tree</graph>
+		</defaultGraphs>
+		<namedGraphs>
+		</namedGraphs>
+		<defaultRemoveGraphs>
+		</defaultRemoveGraphs>
+	</dataset>
+</query>
+
+[DEBUG] 2016-09-23 10:13:19,904 [repositories/trees | c.o.t.q.LoggingClosableIteration] Query executed successfully
+<?xml version='1.0'?>
+<query includeInferred='true' maxExecutionTime='0'>
+	<body>PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+SELECT DISTINCT ?s  ?o
+FROM &lt;http://data.lof.com/tree&gt; WHERE {
+	?s rdfs:comment ?o .
+   # ?s &lt;http://data.lof.com/def/tonto#genreBotanique&gt; ?o
+     #   BIND(LCASE(?o) AS ?or)
+    filter ((?o != "N/A") &amp;&amp; (?o != "0"))
+    filter (regex (?o , "erreur","i"))
+    
+} </body>
+	<dataset>
+		<defaultGraphs>
+			<graph>http://data.lof.com/tree</graph>
+			<graph>http://www.ontotext.com/count</graph>
+		</defaultGraphs>
+		<namedGraphs>
+		</namedGraphs>
+		<defaultRemoveGraphs>
+		</defaultRemoveGraphs>
+	</dataset>
+</query>
+
+[DEBUG] 2016-09-23 10:15:04,344 [repositories/trees | c.o.t.q.LoggingClosableIteration] Query executed successfully
+<?xml version='1.0'?>
+<query includeInferred='true' maxExecutionTime='0'>
+	<body>PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+SELECT DISTINCT   ?or
+FROM &lt;http://data.lof.com/tree&gt; WHERE {
+	#?s &lt;http://data.lof.com/def/tonto#defaut&gt; ?d .
+    ?s &lt;http://data.lof.com/def/tonto#genreBotanique&gt; ?o
+        BIND(LCASE(?o) AS ?or)
+   
+} order by asc (?or)
+ limit 1000 offset 0</body>
+	<dataset>
+		<defaultGraphs>
+			<graph>http://data.lof.com/tree</graph>
+		</defaultGraphs>
+		<namedGraphs>
+		</namedGraphs>
+		<defaultRemoveGraphs>
+		</defaultRemoveGraphs>
+	</dataset>
+</query>
+
+[DEBUG] 2016-09-23 10:15:04,524 [repositories/trees | c.o.t.q.LoggingClosableIteration] Query executed successfully
+<?xml version='1.0'?>
+<query includeInferred='true' maxExecutionTime='0'>
+	<body>PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+SELECT DISTINCT   ?or
+FROM &lt;http://data.lof.com/tree&gt; WHERE {
+	#?s &lt;http://data.lof.com/def/tonto#defaut&gt; ?d .
+    ?s &lt;http://data.lof.com/def/tonto#genreBotanique&gt; ?o
+        BIND(LCASE(?o) AS ?or)
+   
+} order by asc (?or)
+</body>
+	<dataset>
+		<defaultGraphs>
+			<graph>http://data.lof.com/tree</graph>
+			<graph>http://www.ontotext.com/count</graph>
+		</defaultGraphs>
+		<namedGraphs>
+		</namedGraphs>
+		<defaultRemoveGraphs>
+		</defaultRemoveGraphs>
+	</dataset>
+</query>
+
+[DEBUG] 2016-09-23 10:15:07,850 [repositories/trees | c.o.t.q.LoggingClosableIteration] Query executed successfully
+<?xml version='1.0'?>
+<query includeInferred='true' maxExecutionTime='0'>
+	<body>PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+SELECT DISTINCT   ?d
+FROM &lt;http://data.lof.com/tree&gt; WHERE {
+	#?s &lt;http://data.lof.com/def/tonto#defaut&gt; ?d .
+    ?s &lt;http://data.lof.com/def/tonto#genreBotanique&gt; ?o
+        BIND(LCASE(?o) AS ?or)
+   
+} order by asc (?or)
+ limit 1000 offset 0</body>
+	<dataset>
+		<defaultGraphs>
+			<graph>http://data.lof.com/tree</graph>
+		</defaultGraphs>
+		<namedGraphs>
+		</namedGraphs>
+		<defaultRemoveGraphs>
+		</defaultRemoveGraphs>
+	</dataset>
+</query>
+
+[DEBUG] 2016-09-23 10:15:07,955 [repositories/trees | c.o.t.q.LoggingClosableIteration] Query executed successfully
+<?xml version='1.0'?>
+<query includeInferred='true' maxExecutionTime='0'>
+	<body>PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+SELECT DISTINCT   ?d
+FROM &lt;http://data.lof.com/tree&gt; WHERE {
+	#?s &lt;http://data.lof.com/def/tonto#defaut&gt; ?d .
+    ?s &lt;http://data.lof.com/def/tonto#genreBotanique&gt; ?o
+        BIND(LCASE(?o) AS ?or)
+   
+} order by asc (?or)
+</body>
+	<dataset>
+		<defaultGraphs>
+			<graph>http://data.lof.com/tree</graph>
+			<graph>http://www.ontotext.com/count</graph>
+		</defaultGraphs>
+		<namedGraphs>
+		</namedGraphs>
+		<defaultRemoveGraphs>
+		</defaultRemoveGraphs>
+	</dataset>
+</query>
+
