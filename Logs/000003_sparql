@@ -1,0 +1,5 @@
+GET /sparql HTTP/1.1
+User-Agent: Jakarta Commons-HttpClient/3.1
+Host: cellar.publications.europa.eu
+X-Forwarded-For: 10.220.220.16
+
